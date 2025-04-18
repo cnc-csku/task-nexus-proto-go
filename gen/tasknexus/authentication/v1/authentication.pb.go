@@ -74,12 +74,13 @@ func (x *AuthenticateUserRequest) GetPassword() string {
 }
 
 type AuthenticateUserResponse struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Success       bool                   `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
-	Message       string                 `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
-	Token         string                 `protobuf:"bytes,3,opt,name=token,proto3" json:"token,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state                protoimpl.MessageState `protogen:"open.v1"`
+	Success              bool                   `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
+	Message              string                 `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
+	Token                string                 `protobuf:"bytes,3,opt,name=token,proto3" json:"token,omitempty"`
+	RefreshTokenasdfsadf string                 `protobuf:"bytes,4,opt,name=refresh_tokenasdfsadf,json=refreshTokenasdfsadf,proto3" json:"refresh_tokenasdfsadf,omitempty"`
+	unknownFields        protoimpl.UnknownFields
+	sizeCache            protoimpl.SizeCache
 }
 
 func (x *AuthenticateUserResponse) Reset() {
@@ -133,6 +134,13 @@ func (x *AuthenticateUserResponse) GetToken() string {
 	return ""
 }
 
+func (x *AuthenticateUserResponse) GetRefreshTokenasdfsadf() string {
+	if x != nil {
+		return x.RefreshTokenasdfsadf
+	}
+	return ""
+}
+
 var File_tasknexus_authentication_v1_authentication_proto protoreflect.FileDescriptor
 
 const file_tasknexus_authentication_v1_authentication_proto_rawDesc = "" +
@@ -140,11 +148,12 @@ const file_tasknexus_authentication_v1_authentication_proto_rawDesc = "" +
 	"0tasknexus/authentication/v1/authentication.proto\x12\x1btasknexus.authentication.v1\"Q\n" +
 	"\x17AuthenticateUserRequest\x12\x1a\n" +
 	"\busername\x18\x01 \x01(\tR\busername\x12\x1a\n" +
-	"\bpassword\x18\x02 \x01(\tR\bpassword\"d\n" +
+	"\bpassword\x18\x02 \x01(\tR\bpassword\"\x99\x01\n" +
 	"\x18AuthenticateUserResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessage\x12\x14\n" +
-	"\x05token\x18\x03 \x01(\tR\x05token2\x98\x01\n" +
+	"\x05token\x18\x03 \x01(\tR\x05token\x123\n" +
+	"\x15refresh_tokenasdfsadf\x18\x04 \x01(\tR\x14refreshTokenasdfsadf2\x98\x01\n" +
 	"\x15AuthenticationService\x12\x7f\n" +
 	"\x10AuthenticateUser\x124.tasknexus.authentication.v1.AuthenticateUserRequest\x1a5.tasknexus.authentication.v1.AuthenticateUserResponseB\x9a\x02\n" +
 	"\x1fcom.tasknexus.authentication.v1B\x13AuthenticationProtoP\x01ZTgithub.com/cnc-csku/task-nexus-proto-go/tasknexus/authentication/v1;authenticationv1\xa2\x02\x03TAX\xaa\x02\x1bTasknexus.Authentication.V1\xca\x02\x1bTasknexus\\Authentication\\V1\xe2\x02'Tasknexus\\Authentication\\V1\\GPBMetadata\xea\x02\x1dTasknexus::Authentication::V1b\x06proto3"
