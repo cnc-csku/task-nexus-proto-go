@@ -13,6 +13,6 @@ plugins:
     opt: paths=source_relative
 inputs:
   - git_repo: https://github.com/cnc-csku/task-nexus-proto.git
-    branch: feature/proto-gen
+    branch: main
     subdir: proto
     depth: 30
