@@ -24,7 +24,7 @@ const (
 type AuthenticateUserRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Username      string                 `protobuf:"bytes,1,opt,name=username,proto3" json:"username,omitempty"`
-	Passwordd     string                 `protobuf:"bytes,2,opt,name=passwordd,proto3" json:"passwordd,omitempty"`
+	Password      string                 `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -66,9 +66,9 @@ func (x *AuthenticateUserRequest) GetUsername() string {
 	return ""
 }
 
-func (x *AuthenticateUserRequest) GetPasswordd() string {
+func (x *AuthenticateUserRequest) GetPassword() string {
 	if x != nil {
-		return x.Passwordd
+		return x.Password
 	}
 	return ""
 }
@@ -137,10 +137,10 @@ var File_tasknexus_authentication_v1_authentication_proto protoreflect.FileDescr
 
 const file_tasknexus_authentication_v1_authentication_proto_rawDesc = "" +
 	"\n" +
-	"0tasknexus/authentication/v1/authentication.proto\x12\x1btasknexus.authentication.v1\"S\n" +
+	"0tasknexus/authentication/v1/authentication.proto\x12\x1btasknexus.authentication.v1\"Q\n" +
 	"\x17AuthenticateUserRequest\x12\x1a\n" +
-	"\busername\x18\x01 \x01(\tR\busername\x12\x1c\n" +
-	"\tpasswordd\x18\x02 \x01(\tR\tpasswordd\"d\n" +
+	"\busername\x18\x01 \x01(\tR\busername\x12\x1a\n" +
+	"\bpassword\x18\x02 \x01(\tR\bpassword\"d\n" +
 	"\x18AuthenticateUserResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessage\x12\x14\n" +
