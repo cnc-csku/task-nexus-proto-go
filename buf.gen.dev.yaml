@@ -1,0 +1,18 @@
+version: v2
+clean: true
+managed:
+  enabled: true
+  disable:
+    - module: buf.build/googleapis/googleapis
+  override:
+    - file_option: go_package_prefix
+      value: github.com/cnc-csku/task-nexus-proto-go
+plugins:
+  - remote: buf.build/protocolbuffers/go
+    out: gen
+    opt: paths=source_relative
+inputs:
+  - git_repo: https://github.com/cnc-csku/task-nexus-proto.git
+    branch: dev
+    subdir: proto
+    depth: 30
